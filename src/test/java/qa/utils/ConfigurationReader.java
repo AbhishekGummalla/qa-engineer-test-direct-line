@@ -34,5 +34,4 @@ public class ConfigurationReader {
             throw new RuntimeException(key + "key not defined in the properties file.");
         }
     }
-
 }

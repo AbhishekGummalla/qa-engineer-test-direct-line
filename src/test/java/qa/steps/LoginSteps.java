@@ -37,6 +37,7 @@ public class LoginSteps {
     @And("^user should see invalid username error$")
     public void verifyInvalidUsernameError() {
         Assert.assertTrue(loginPage.isUserNameErrorDisplayed());
+        loginPage.quitDriver();
     }
 
     @When("^user enters ([^\"]*) in the password field$")
@@ -47,6 +48,7 @@ public class LoginSteps {
     @And("^user should see invalid password error$")
     public void verifyInvalidPasswordError() {
         Assert.assertTrue(loginPage.isPasswordErrorDisplayed());
+        loginPage.quitDriver();
     }
 
     @And("^user clicks submit button$")
@@ -57,6 +59,6 @@ public class LoginSteps {
     @Then("^user should be logged in$")
     public void userIsLoggedIn() {
 // TODO - Add assertion to validate login page
+        loginPage.quitDriver();
     }
-
 }

@@ -12,7 +12,7 @@ public class BasePage {
     protected WebDriverWait wait;
 
     //TODO - To move - driver initialization within @Before hook
-    public BasePage(){
+    public BasePage() {
         configurationReader = new ConfigurationReader();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -20,8 +20,8 @@ public class BasePage {
         driver.get(configurationReader.get("appUrl"));
     }
 
-    //TODO - To move -  quit driver to @After hook
-    public void quitDriver(){
-
+    //TODO - To move - quit driver to @After hook
+    public void quitDriver() {
+        driver.quit();
     }
 }
